@@ -1,11 +1,10 @@
-import pg from 'pg'
+import pg, { ClientConfig } from 'pg'
 
 const { Client } = pg
+export const clientFactory = async (config: ClientConfig) => {
+  const client = new Client(config)
 
-const client = new Client({
-  user: 'postgres',
-  password: 'example',
-})
-await client.connect()
+  await client.connect()
 
-export { client }
+  return client
+}

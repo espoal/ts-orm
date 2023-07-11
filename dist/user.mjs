@@ -1,4 +1,4 @@
-// src/user/index.mts
+// src/customers/index.mts
 var insertUserQuery = (params) => {
   const { username, email, role, password, manager } = params;
   const text = `
@@ -20,7 +20,7 @@ var client = new Client({
 });
 await client.connect();
 
-// src/user.mts
+// src/customers.mts
 var user = {
   username: "test",
   email: "j@d.e",

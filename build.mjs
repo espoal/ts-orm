@@ -2,7 +2,7 @@ import esbuild from 'esbuild'
 
 export const options = {
     plugins: [],
-    entryPoints: ['src/user.mts', 'src/fixtures.mts'],
+    entryPoints: ['src/index.mts', 'src/migrations.mts', 'src/fixtures.mts'],
     outdir: 'dist',
     bundle: true,
     splitting: false,
@@ -12,7 +12,7 @@ export const options = {
     treeShaking: true,
     outExtension: { '.js': '.mjs' },
     tsconfig: 'tsconfig.json',
-    external: ['pg'],
+    external: ['pg', 'ajv'],
 }
 
 

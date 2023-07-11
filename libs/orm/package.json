@@ -1,4 +1,11 @@
 {
-  "name": "orm",
+  "name": "@libs/orm",
+  "main": "index.mts",
+  "dependencies": {
+    "pg": "8.11.1"
+  },
+  "devDependencies": {
+    "@types/pg": "8.10.2"
+  },
   "packageManager": "yarn@4.0.0-rc.48"
 }

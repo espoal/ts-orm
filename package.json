@@ -1,0 +1,9 @@
+{
+  "name": "ts-orm",
+  "workspaces": [
+    "dist",
+    "src",
+    "libs/*"
+  ],
+  "packageManager": "yarn@4.0.0-rc.48"
+}

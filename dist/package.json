@@ -1,0 +1,7 @@
+{
+  "name": "dist",
+  "dependencies": {
+    "pg": "8.11.1"
+  },
+  "packageManager": "yarn@4.0.0-rc.48"
+}

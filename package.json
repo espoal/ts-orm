@@ -1,0 +1,25 @@
+{
+  "name": "ts-orm",
+  "scripts": {
+    "dev:start": "docker compose -f infra/infra.compose.yml up --build",
+    "dev:clean": "docker compose -f infra/infra.compose.yml down --volumes --remove-orphans",
+    "lint:apply": "rome check src libs --apply-unsafe",
+    "lint:format": "rome format src libs --write",
+    "lint:fix": "yarn lint:format && yarn lint:apply"
+  },
+  "workspaces": [
+    "dist",
+    "src",
+    "libs/*"
+  ],
+  "dependencies": {
+    "@libs/orm": "workspace:*",
+    "ajv": "8.12.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.18.11",
+    "rome": "12.1.3",
+    "typescript": "5.1.6"
+  },
+  "packageManager": "yarn@4.0.0-rc.48"
+}
